@@ -1,0 +1,61 @@
+<!-- Video Component commented out for testing purposes -->
+
+{{!--  
+<div class="uk-cover-container">
+    <video src="/images/cooking-mp4.mp4" loop muted playsinline uk-video="autoplay: inview"></video>
+</div> --}}
+
+
+<!-- Breadcrumb -->
+<div class="uk-margin-top">
+    <ul class="uk-breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li class="uk-disabled"><a href="/">Blog page</a></li>
+    </ul>
+</div>
+
+<!-- Link to other pages -->
+<div class="uk-flex uk-margin-top-medium">
+    <div class="uk-disabled"><a href="/" class="uk-button uk-button-default category-buttons">View All
+            Blogs</a>
+    </div>
+    {{!-- <div class="uk-margin-left-small"><a href="/category/Appetizer"
+            class="uk-button uk-button-default category-buttons">Appetizers</a></div>
+    <div class="uk-margin-left-small"><a href="/category/Breakfast"
+            class="uk-button uk-button-default category-buttons">Breakfast</a></div>
+    <div class="uk-margin-left-small"><a href="/category/Lunch"
+            class="uk-button uk-button-default category-buttons">Lunch</a>
+    </div>
+    <div class="uk-margin-left-small"><a href="/category/Dinner"
+            class="uk-button uk-button-default category-buttons">Dinner</a>
+    </div> --}}
+</div>
+
+<!-- Add a recipe button -->
+{{#if loggedIn}}
+<div class="add-recipe-container">
+    <a href="/addRecipe" class="uk-button uk-button-primary" id="add-recipe" uk-tooltip="Add a recipe"><span
+            uk-icon="plus"></span></a>
+</div>
+{{else}}
+<div class="add-recipe-container">
+    <a href="/addRecipe" class="uk-button uk-button-primary" id="add-recipe" uk-tooltip="Login or Register to add your own recipe">Login/Register</a>
+</div>
+{{/if}}
+
+
+
+<!-- Recipe Grid -->
+<div class="uk-text-center">
+    <div class="uk-flex-center" uk-grid>
+        {{#each recipes as |recipe|}}
+        <div class="uk-card uk-card-default uk-margin-left uk-card-hover"
+            style="padding-left: 0px !important; border-radius:10px!important;">
+            {{> recipe-info recipe }}
+        </div>
+        {{/each}}
+    </div>
+    <div class="uk-padding">
+        <a href="#toTop" class="" uk-tooltip="Back to Top" uk-totop></a>
+    </div>
+</div>

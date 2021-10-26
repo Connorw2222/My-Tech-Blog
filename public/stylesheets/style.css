@@ -1,0 +1,88 @@
+* {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+
+  }
+  ul, ol, li, p, a, input, label, textarea, select, option, button{
+    font-size:12px!important;
+  }
+  .uk-logo:hover{
+    opacity: .6!important;
+  }
+  .uk-margin-left-small{
+    margin-left: 5px;
+  }
+  .add-recipe-container{
+    margin-top: -40px;
+    text-align: right;
+    padding-bottom: 50px;
+  }
+  .add-recipe-container a{
+    border-radius: 20px!important;
+  }
+  .category-buttons{
+    border-radius: 20px!important;
+  }
+  
+  .food-img{
+    height: 300px;
+    width: 300px;
+    text-align: center;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+  .food-img:hover{
+    opacity: .8;
+  }
+  .footer-content{
+    padding: 15px; 
+  }
+
+  .food-description{
+    max-width: 220px;
+    white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  }
+  .food-title{
+    max-width: 220px;
+    white-space:pre-wrap;
+  }
+
+  #add-recipe span{
+    transition:.5s;
+  }
+  #add-recipe span:hover{
+    -o-transform:rotate(90deg);
+    -ms-transform:rotate(90deg);
+    -moz-transform:rotate(90deg);
+    -webkit-transform:rotate(90deg);
+    transform:rotate(90deg);
+  }
+
+  #togglePassword {
+    position: absolute;
+    margin-top: 7px;
+    margin-left:80px;
+    cursor: pointer;
+}
+
+.initials{
+  width: 15px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  color: red;
+  margin-left: 30px!important;
+}
+.initials span{
+  font-size: 24px;
+  position: absolute!important;
+  margin-left:-21px;
+
+}
+  footer{
+    margin-top: 100px;
+  }
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take My Receipe</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/responsive.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.7.1/dist/css/uikit.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+    <nav class="uk-navbar-container uk-margin uk-navbar-transparent" uk-navbar>
+        <!-- Navigation on the left side -->
+        <div class="uk-navbar-left">
+            <!-- Logo/Home button -->
+            <a class="uk-navbar-item uk-logo" href="/">
+
+                    <H1>My Tech Blog</H1>
+            </a>
+        </div>
+
+        <!-- Navigation on the right side -->
+        <div class="uk-navbar-right">
+            <!-- Login/Signup page -->
+            <div class="uk-padding-small">
+                {{#if loggedIn}}
+                 <a id="logout">
+                 <button class="category-buttons uk-button uk-button-danger">Logout</button>
+                 </a>
+                {{else}}
+                <a class="uk-button uk-button-default uk-button-small" href="/login" uk-icon="sign-in"
+                    uk-tooltip="title: Login; pos: bottom"></a>
+                <a class="uk-button uk-button-primary uk-button-small" href="/signup" uk-icon="user"
+                    uk-tooltip="title: Signup; pos: bottom"></a>
+                {{/if}}
+
+            </div>
+        </div>
+    </nav>
+    <main class="uk-container" id="toTop">
+        {{{ body }}}
+    </main>
+
+
+    {{#if loggedIn}}
+    <script src="/javascript/logout.js"></script>
+    {{/if}}
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.7.4/dist/css/uikit.min.css" />
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.4/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.4/dist/js/uikit-icons.min.js"></script>
+</body>
+
+</html>
